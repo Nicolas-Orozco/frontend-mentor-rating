@@ -15,7 +15,7 @@
     <title>Frontend Mentor | Interactive rating component</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
+    <style type="text/tailwindcss">
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -23,33 +23,49 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+      .header {
+        @apply text-2xl font-semibold my-3;
+      }
+      .container {
+        @apply max-w-sm p-7 rounded-3xl bg-gray-900 text-white text-base;
+      }
+      .btn {
+        @apply w-full transition-colors bg-orange-500 hover:bg-white hover:text-orange-500 uppercase rounded-3xl tracking-widest h-10;
+      }
+      .main {
+        @apply text-sm font-light my-3;
+      }
     </style>
   </head>
   <body class="bg-black">
-    <section class="text-white text-base">
-      <!-- Rating state start -->
+    <div class="h-screen w-screen flex justify-center items-center">
+      <section class="container">
+        <!-- Rating state start -->
 
-      How did we do? Please let us know how we did with your support request.
-      All feedback is appreciated to help us improve our offering! 1 2 3 4 5
-      Submit
+        <h2 class="header">How did we do?</h2>
+        <p class="main">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        1 2 3 4 5
+        <!-- Rating state end -->
 
-      <!-- Rating state end -->
+        <!-- Thank you state start -->
 
-      <!-- Thank you state start -->
+        <!--You selected
+         Add rating here 
+        out of 5 Thank you! We appreciate you taking the time to give a rating.
+        If you ever need more support, don’t hesitate to get in touch!-->
 
-      You selected
-      <!-- Add rating here -->
-      out of 5 Thank you! We appreciate you taking the time to give a rating. If
-      you ever need more support, don’t hesitate to get in touch!
-
-      <!-- Thank you state end -->
-
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </div>
-    </section>
+        <!-- Thank you state end -->
+        <button class="btn">Submit</button>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Your Name Here</a>.
+        </div>
+      </section>
+    </div>
   </body>
 </html>
