@@ -29,13 +29,13 @@
         @apply max-w-sm p-7 m-6 rounded-3xl bg-gray-900 text-white text-base;
       }
       .btn {
-        @apply w-full transition-colors md:text-base text-sm bg-orange-500 hover:bg-white hover:text-orange-500 uppercase rounded-3xl tracking-widest h-10 mt-6;
+        @apply w-full transition-colors md:text-base text-sm bg-orange-500 hover:bg-white hover:text-orange-500  uppercase rounded-3xl tracking-widest h-10 mt-6;
       }
       .main {
         @apply md:text-sm text-xs font-light my-4;
       }
       .rate {
-        @apply flex flex-1 p-3 w-12 md:text-base text-xs justify-center text-gray-500 bg-slate-800 rounded-full transition-colors peer-hover:bg-slate-500
+        @apply flex flex-1 p-3 w-12 md:text-base text-xs justify-center items-center text-gray-500 bg-slate-800 rounded-full transition-colors peer-hover:bg-slate-500
         peer-checked:bg-orange-500
         peer-hover:peer-checked:bg-orange-500
         peer-hover:text-white peer-checked:text-white select-none;
@@ -44,93 +44,33 @@
         @apply flex flex-wrap justify-between w-full;
       }
       .star {
-        @apply w-10;
+        @apply w-[2.3rem];
       }
       .hide {
         @apply opacity-0 absolute;
+      }
+      .rate-label {
+        @apply mx-auto text-sm w-48 h-8 mt-6 text-orange-400;
       }
     </style>
   </head>
   <body class="bg-black">
     <div class="h-screen w-screen flex justify-center items-center">
       <form class="container">
-        <img src="./images/icon-star.svg" class="rate star" />
-        <h2 class="header">Second</h2>
-        <p class="main">
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
+        <img src="./images/illustration-thank-you.svg" class="mx-auto" />
+        <label class="rate rate-label"
+          >You selected&nbsp;<span id="stars">?</span>&nbsp;out of 5</label
+        >
+        <h2 class="header text-center">Thank you!</h2>
+        <p class="main text-center">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
         </p>
-        <div class="rating">
-          <section>
-            <input
-              type="radio"
-              id="1-rate"
-              name="rating"
-              class="hide peer"
-              value="1"
-              required
-            />
-            <label for="1-rate" class="rate">1</label>
-          </section>
-          <section>
-            <input
-              type="radio"
-              id="2-rate"
-              name="rating"
-              class="hide peer"
-              value="2"
-            />
-            <label for="2-rate" class="rate">2</label>
-          </section>
-          <section>
-            <input
-              type="radio"
-              id="3-rate"
-              name="rating"
-              class="hide peer"
-              value="3"
-            />
-            <label for="3-rate" class="rate">3</label>
-          </section>
-          <section>
-            <input
-              type="radio"
-              id="4-rate"
-              name="rating"
-              class="hide peer"
-              value="4"
-            />
-            <label for="4-rate" class="rate">4</label>
-          </section>
-          <section>
-            <input
-              type="radio"
-              id="5-rate"
-              name="rating"
-              class="hide peer"
-              value="5"
-            />
-            <label for="5-rate" class="rate">5</label>
-          </section>
-        </div>
-        <!-- Rating state end -->
-
-        <!-- Thank you state start -->
-
-        <!--You selected
-         Add rating here 
-        out of 5 Thank you! We appreciate you taking the time to give a rating.
-        If you ever need more support, don’t hesitate to get in touch!-->
-
-        <!-- Thank you state end -->
-        <button class="btn" type="submit">Submit</button>
-        <div class="attribution">
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by <a href="#">Your Name Here</a>.
-        </div>
       </form>
     </div>
+    <script type="text/javascript">
+      const rating = window.location.search.replace(/\D/g, "");
+      document.querySelector("#stars").innerHTML = rating;
+    </script>
   </body>
 </html>
