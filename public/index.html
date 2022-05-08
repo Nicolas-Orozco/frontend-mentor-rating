@@ -21,14 +21,16 @@
   </head>
   <body class="bg-blue4 w-screen h-screen flex justify-center items-center">
       <form class="container" action="./thank.html" method="GET">
+        <header role="Introduction">
         <img src="./icon-star.svg" class="rate star" alt="Star icon" />
-        <h2 class="header">How did we do?</h2>
+        <h1 class="header">How did we do?</h1>
         <p class="main">
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <div class="rating">
-          <section>
+      </header>
+        <main class="rating" role="Rating">
+          <div>
             <input
               type="radio"
               id="1-rate"
@@ -38,8 +40,8 @@
               required
             />
             <label for="1-rate" class="rate">1</label>
-          </section>
-          <section>
+          </div>
+          <div>
             <input
               type="radio"
               id="2-rate"
@@ -48,8 +50,8 @@
               value="2"
             />
             <label for="2-rate" class="rate">2</label>
-          </section>
-          <section>
+          </div>
+          <div>
             <input
               type="radio"
               id="3-rate"
@@ -58,8 +60,8 @@
               value="3"
             />
             <label for="3-rate" class="rate">3</label>
-          </section>
-          <section>
+          </div>
+          <div>
             <input
               type="radio"
               id="4-rate"
@@ -68,8 +70,8 @@
               value="4"
             />
             <label for="4-rate" class="rate">4</label>
-          </section>
-          <section>
+          </div>
+          <div>
             <input
               type="radio"
               id="5-rate"
@@ -78,16 +80,16 @@
               value="5"
             />
             <label for="5-rate" class="rate">5</label>
-          </section>
-        </div>
+          </div>
+        </main>
         <button class="btn" type="submit">Submit</button>
-        </div>
-      </form>
-      <aside class="absolute top-0 bg-white w-screen text-center md:text-base text-xs">
+      </div>
+      <footer class="text-center text-xs" role="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-blue-400 font-bold underline"
           >Frontend Mentor</a
-        >. Coded by <a href="https://github.com/Nicolas-Orozco" class="text-primary font-bold underline" target="_blank">Nícolas Orozco</a>.
-      </aside>
+        >. Coded by <a href="https://github.com/Nicolas-Orozco" class="text-primary font-bold underline" target="_blank">Nicolas Orozco</a>.
+      </footer>
+      </form>
   </body>
 </html>

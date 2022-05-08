@@ -9,7 +9,7 @@
   @apply font-Overpass max-w-[23rem] p-7 m-6 rounded-3xl bg-gradient-to-b from-blue2 to-blue3 text-white text-base;
 }
 .btn {
-  @apply w-full transition-colors md:text-base text-sm bg-primary hover:bg-white hover:text-primary  uppercase rounded-3xl tracking-widest h-10 mt-6;
+  @apply w-full transition-colors md:text-base text-sm bg-primary hover:bg-white hover:text-primary uppercase rounded-3xl font-medium tracking-widest h-10 mt-6 mb-2;
 }
 .main {
   @apply md:text-sm text-xs font-normal mt-3 mb-6 text-grey1;

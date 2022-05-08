@@ -20,35 +20,38 @@
     <link href="./styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body class="bg-blue4 w-screen h-screen flex justify-center items-center">
-      <form class="container">
-        <img src="./illustration-thank-you.svg" class="mx-auto" alt="Feedback received"/>
-        <label class="rate rate-label"
-          >You selected&nbsp;<span id="stars">?</span>&nbsp;out of 5</label
-        >
-        <h2 class="header text-center">Thank you!</h2>
+    <form class="container">
+      <img
+        src="./illustration-thank-you.svg"
+        class="mx-auto"
+        alt="Feedback received"
+      />
+      <label class="rate rate-label"
+        >You selected&nbsp;<span id="stars">?</span>&nbsp;out of 5</label
+      >
+      <header role="Thanks">
+        <h1 class="header text-center">Thank you!</h1>
         <p class="main text-center">
           We appreciate you taking the time to give a rating. If you ever need
           more support, don’t hesitate to get in touch!
         </p>
-      </form>
-    </div>
-    <aside
-      class="absolute top-0 bg-white w-screen text-center md:text-base text-xs"
-    >
-      Challenge by
-      <a
-        href="https://www.frontendmentor.io?ref=challenge"
-        target="_blank"
-        class="text-blue-400 font-bold underline"
-        >Frontend Mentor</a
-      >. Coded by
-      <a
-        href="https://github.com/Nicolas-Orozco"
-        class="text-primary font-bold underline"
-        target="_blank"
-        >Nícolas Orozco</a
-      >.
-    </aside>
+      </header>
+      <footer class="text-center text-xs" role="attribution">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          class="text-blue-400 font-bold underline"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          href="https://github.com/Nicolas-Orozco"
+          class="text-primary font-bold underline"
+          target="_blank"
+          >Nicolas Orozco</a
+        >.
+      </footer>
+    </form>
     <script type="text/javascript">
       const rating = window.location.search.replace(/\D/g, "");
       document.querySelector("#stars").innerHTML = rating;
